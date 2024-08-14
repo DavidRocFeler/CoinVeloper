@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</MAIN></title>
+    <link rel="stylesheet" href="../../style/navBar.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-financial/dist/chartjs-chart-financial.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.0.0/dist/chartjs-adapter-luxon.min.js"></script>
+
+
+</head>
+<body>
+    
+    <div id="container">
+  
+        <div id="tabla1">   
+            <table>
+                <thead>
+                    <tr>
+                        <td class="header-container">
+                            <img src="../../assets/logo_btc.png" alt="">
+                            <h2 id="cryptoName">Bitcoin</h2>
+                            <span>BTC</span>
+                            <select id="crypto-select" class="crypto-select"></select>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tbody id="bitcoin-precio"></tbody>
+            
+            </table>
+
+            <table>
+                <tbody >
+                    <tr id="metrics-data">
+                        <td class="tdtwe">Market cap (24h)</td>
+                        <td id="market-cap-variation"></td>
+                        <td id="market-cap-value"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <tbody >
+                    <tr id="metrics-data">
+                        <td class="tdtwe">Total supply</td>
+                        <td class="espacio">-</td>
+                        <td id="total-supply"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <tbody >
+                    <tr id="metrics-data">
+                        <td class="tdtwe">Max. supply</td>
+                        <td class="espacio">-</td>
+                        <td id="max-supply"></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table>
+                <tbody >
+                    <tr id="metrics-data">
+                        <td class="tdtwe">Fully diluted mark.</td>
+                        <td class="espacio2">-</td>
+                        <td id="fdmc"> 
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <tbody >
+                    <tr id="price-data-time">
+                        <td class="tdtwe">Price performance</td>
+                        <td ></td>
+                        <td id="custom-select">
+                            <div >
+                                <select class="select-selected">
+                                    <option value="24h">24h</option>
+                                    <option value="30d">1m</option>
+                                    <option value="52w">1y</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table>
+                <tbody >
+                    <tr id="low-high">
+                        <td id="low">Low</td>
+                        
+                        <td id="high"> High </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <tbody >
+                    <tr id="low-high-price">
+                        <td id="precio-de-low"></td>
+                        <td >-</td>
+                        <td id="precio-de-high"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+           
+            <canvas id="myChart"></canvas>
+
+            <div id="graficaMarket" class="button-container">
+                
+                <button data-period="15m">15m</button>
+                <button data-period="1h" >1h</button>
+                <button data-period="4h">4h</button>
+                <button data-period="8h">8h</button>
+                <button data-period="1d" >1d</button>
+                <button data-period="7d" >1w</button>
+                <button data-period="30d" >1M</button>
+               
+            </div>
+
+            <table style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td id="trtwe">BTC to USD converter</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="single-container">
+                                <div class="btc-section">
+                                    <span class="btc-cell">BTC</span>
+                                    <input type="number" id="btc-input">
+                                </div>
+                                <div class="divider"></div>
+                                <div class="usd-section">
+                                    <span class="usd-cell">USD</span>
+                                    <span id="usd-output"></span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+          
+        </div>
+        <hr/>
+           
+        <div id="tabla2">
+                <section>
+                    <div id="tableHeader">
+                        <a href="../../public/index.html">Home</a>
+                        <a href="../articles-news/art.html">Articles</a>
+                        <a href="../learn/learninprocess.html">Learn</a>
+                        <a href="../jobs/jobs.html">Jobs</a>      
+                    </div> 
+                </section> <hr/>
+            <article onclick="window.location='../articles-news/bitcoin/news/btcone.html';" class="article" data-title="Bitcoin">
+                <section>
+                    <div id="containtext">
+                        <p p class="tiempo-transcurrido" data-fecha-publicacion="2024-05-06T01:30:00"></p>
+                        <strong>Mr. 100', the mysterious cryptocurrency...</strong>
+                        <p>The transaction involved the acquisition of 4,100 BTC, amounting to a total of 
+                            $238 million, at a time when each coin was valued at $58,000...
+                        </p>
+                    </div>    
+                </section>
+                <section>   
+                    <img src="../articles-news/bitcoin/news/bitcoinnew1_copia.JPG" alt="" class="tablecenter">
+                </section>
+            </article>
+        
+            <article onclick="window.location='../articles-news/ethereum/news/ethone.html';">
+                <section>
+                    <div>
+                        <p p class="tiempo-transcurrido" data-fecha-publicacion="2024-05-07T20:30:00"></p>
+                        <strong>On May 7th, Ethereum's market value...</strong>
+                        <p>Ether, also known as Ethereum, ranks as the second-largest virtual 
+                            currency by market capitalization...
+                        </p>
+                    </div>    
+                </section>
+                <section>
+                    <img src="../articles-news/ethereum/news/Sin_título-1_copia.jpg" alt="" class="tablecenter">
+                </section>
+            </article>
+
+            <article onclick="window.location='../articles-news/theter/news/usdtone.html';">
+                <section>
+                    <div>
+                        <p p class="tiempo-transcurrido" data-fecha-publicacion="2024-05-08T20:30:00"></p>
+                        <strong>Strengthening Oversight: Tether Partners...</strong>
+                        <p>Tether announces partnership with Chainalysis
+                            Aims to enhance monitoring of USDT in secondary markets...
+                        </p>
+                    </div>    
+                </section>
+                <section>
+                    <img src="../articles-news/theter/news/usdtnew1.jpg" alt="" class="tablecenter">
+                </section>
+            </article>
+        
+            <article onclick="window.location='../articles-news/binance/news/bnbone.html';">
+                <section>
+                    <div>
+                        <p p class="tiempo-transcurrido" data-fecha-publicacion="2024-05-09T20:30:00"></p>
+                        <strong>Nigerian Court Delays Money Laundering...</strong>
+                        <p>Apparently, a Nigerian judge has postponed the trial against 
+                            Binance and two executives until May 17 so...
+                        </p>
+                    </div>    
+                </section>
+                <section>
+                    <img src="../articles-news/binance/news/binancenew1.jpg" alt="" class="tablecenter">
+                </section>
+            </article>
+        
+            <article onclick="window.location='../articles-news/solana/news/solone.html';">
+                <section>
+                    <div>
+                        <p p class="tiempo-transcurrido" data-fecha-publicacion="2024-05-10T20:30:00"></p>
+                        <strong>Solana and Ethereum Gain Traction in the...</strong>
+                        <p>Last week, STEPN, a Web3 lifestyle application with social and gaming 
+                            elements, welcomed Adidas (ETR:ADSGN) to the Solana network...
+                        </p>
+                    </div>    
+                </section>
+                <section>
+                    <img src="../articles-news/solana/news/solanda1_copia.JPG" alt="" class="tablecenter">
+                </section>
+            </article>
+        
+            <article onclick="window.location='../articles-news/cardano/news/adaone.html';">
+                <section>
+                    <div>
+                        <p p class="tiempo-transcurrido" data-fecha-publicacion="2024-05-11T20:30:00"></p>
+                        <strong>ADA Whale Activity Sparks Speculation...</strong>
+                        <p>Cardano whales continue to accumulate altcoins despite a 30% drop in 
+                            its value over the past month...
+                        </p>
+                    </div>    
+                </section>
+                <section>
+                    <img src="../articles-news/cardano/news/adanew1.jpg" alt=""class="tablecenter">     
+                </section>
+            </article>
+        
+            
+        </div>
+        <hr/>
+       
+        <div id="tabla3">
+        </div>
+        <hr/>
+
+    </div>      
+    
+    <script src="../../javascript/lowhigh.js"></script>
+    <script src="../../javascript/supply.js"></script>
+    <script src="../../javascript/newelsetooldelse.js"></script>
+    <script src="../../javascript/tiempo.js"></script>
+    <script src="../../javascript/cryptovelas.js"></script>
+    <script src="../../javascript/pricetimereal.js"></script>
+    <script src="../../javascript/cryptovariation.js"></script>
+    <script src="../../javascript/convertousd.js"></script>
+</body>
+</html>
