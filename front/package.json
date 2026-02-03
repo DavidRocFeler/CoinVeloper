@@ -1,4 +1,7 @@
 {
     "name": "coinveloper",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "scripts": {
+      "vercel-build": "node fix-paths.js"
+    }
   }
