@@ -14,16 +14,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    searchInput.addEventListener("keydown", function(event) {
-        if (event.key === "Enter") { // Detecta cuando se presiona Enter
-            event.preventDefault(); // Previene el comportamiento predeterminado
-            const query = searchInput.value.trim();
-            if (query) {
-                // Redirige a la nueva página con la búsqueda
-                window.location.href = `../pages/searchResult/search_results.html?query=${encodeURIComponent(query)}`;
-            }
-        }
-    });
+    // searchInput.addEventListener("keydown", function(event) {
+    //     if (event.key === "Enter") { // Detecta cuando se presiona Enter
+    //         event.preventDefault(); // Previene el comportamiento predeterminado
+    //         const query = searchInput.value.trim();
+    //         if (query) {
+    //             // Redirige a la nueva página con la búsqueda
+    //             window.location.href = `../pages/searchResult/search_results.html?query=${encodeURIComponent(query)}`;
+    //         }
+    //     }
+    // });
 });
 
 
