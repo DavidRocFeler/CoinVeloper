@@ -1,6 +1,20 @@
 {
     "version": 2,
+    "buildCommand": "echo 'Build started'",
+    "outputDirectory": ".",
     "routes": [
+      {
+        "src": "/",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/pages/(.*)\\.html",
+        "dest": "/pages/$1.html"
+      },
+      {
+        "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|webp))",
+        "dest": "/$1"
+      },
       {
         "handle": "filesystem"
       }
