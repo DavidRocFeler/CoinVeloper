@@ -1,9 +1,7 @@
 {
     "name": "coinveloper",
     "version": "1.0.0",
-    "private": true,
     "scripts": {
-      "dev": "echo 'Static site - no dev server needed'",
-      "build": "echo 'No build step required for static site'"
+      "build": "find . -name '*.html' -type f -exec sh -c 'sed -i \"\" \"s/href=\\\"\\.\\//href=\\\"\\//g; s/src=\\\"\\.\\//src=\\\"\\//g; s/href=\\\"\\.\\.\\//href=\\\"\\//g; s/src=\\\"\\.\\.\\//src=\\\"\\//g\" \"$0\"' {} \\;"
     }
   }
