@@ -2,8 +2,8 @@
     "version": 2,
     "builds": [
       {
-        "src": "*.html",
-        "use": "@vercel/static"
+        "src": "middleware.js",
+        "use": "@vercel/edge"
       },
       {
         "src": "**/*",
@@ -13,13 +13,32 @@
     "routes": [
       {
         "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))",
+        "dest": "/$1",
         "headers": {
-          "Cache-Control": "public, max-age=31536000, immutable"
+          "Cache-Control": "public, max-age=31536000"
         }
       },
       {
+        "src": "/(.*\\.html)",
+        "dest": "/$1"
+      },
+      {
         "src": "/(.*)",
-        "dest": "/index.html"
+        "dest": "/index.html",
+        "headers": {
+          "Content-Type": "text/html; charset=utf-8"
+        }
+      }
+    ],
+    "headers": [
+      {
+        "source": "/(.*)",
+        "headers": [
+          {
+            "key": "Content-Security-Policy",
+            "value": "default-src 'self' 'unsafe-inline' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';"
+          }
+        ]
       }
     ]
   }

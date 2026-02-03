@@ -1,7 +1,4 @@
 {
     "name": "coinveloper",
-    "version": "1.0.0",
-    "scripts": {
-      "build": "find . -name '*.html' -type f -exec sh -c 'sed -i \"\" \"s/href=\\\"\\.\\//href=\\\"\\//g; s/src=\\\"\\.\\//src=\\\"\\//g; s/href=\\\"\\.\\.\\//href=\\\"\\//g; s/src=\\\"\\.\\.\\//src=\\\"\\//g\" \"$0\"' {} \\;"
-    }
+    "version": "1.0.0"
   }
