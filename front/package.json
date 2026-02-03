@@ -1,0 +1,9 @@
+{
+    "name": "coinveloper",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "dev": "echo 'Static site - no dev server needed'",
+      "build": "echo 'No build step required for static site'"
+    }
+  }
